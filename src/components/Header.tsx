@@ -28,7 +28,12 @@ const Header = () => {
               </a>
             </li>
             <li>
-              <a href="">Projeto</a>
+              <a
+                href="https://github.com/JoaoSBarbosa/name-change-state"
+                target="_blank"
+              >
+                Projeto
+              </a>
             </li>
           </ul>
         </nav>

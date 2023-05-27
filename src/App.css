@@ -11,6 +11,7 @@
   --max-w: 1000px;
   /* --bg-1: #282c34; */
   --bg-1: #243757;
+  --bg-2: #5b88a5;
   --width100: 100%;
   --border-r-top: 5px 5px 0 0;
   --border-r-bottom: 0 0 5px 5px;
@@ -56,7 +57,9 @@ a {
   align-items: var(--al-item);
   width: var(--width100);
   border-radius: var(--border-r-top);
+  text-transform: uppercase;
 }
+
 .logo img {
   height: 50px;
 }
@@ -69,6 +72,22 @@ a {
   display: var(--d-flex);
   gap: var(--p20);
   color: var(--color1);
+}
+.menu-list a {
+  position: relative;
+}
+.menu-list a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 4px;
+  transition: all ease 0.3s;
+  position: absolute;
+}
+.menu-list a:hover::after {
+  width: 100%;
 }
 .container {
   max-width: 1000px;
@@ -86,6 +105,7 @@ a {
 }
 form {
   border: 2px solid rgb(190, 190, 190);
+  border: 2px solid var(--bg-2);
   padding: 20px;
   border-radius: var(--b-1);
 }
@@ -93,6 +113,7 @@ label {
   flex: 1;
   display: flex;
   align-items: center;
+  font-weight: 600;
 }
 input {
   flex: 8;
@@ -104,7 +125,7 @@ textarea:focus,
 input:focus,
 select:focus {
   box-shadow: 0 0 0 0;
-  border: 1px solid darkgoldenrod;
+  border: 1px solid #066699;
   outline: 0;
 }
 @media (max-width: 830px) {
@@ -120,21 +141,33 @@ select:focus {
   display: flex;
   justify-content: center;
   padding: 20px;
-  border: 2px solid rgb(190, 190, 190);
+  border: 2px solid var(--bg-2);
   border-radius: var(--b-1);
 }
 footer {
   margin: 10px;
-  text-align: center;
   width: var(--width100);
   border-radius: var(--border-r-bottom);
 }
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+footer p {
+  align-items: center;
 }
-
+footer a {
+  position: relative;
+  max-width: max-content;
+}
+footer a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: var(--color1);
+  display: block;
+  transition: all ease 0.3s;
+  position: absolute;
+}
+footer a:hover::after {
+  width: 100%;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -144,21 +177,4 @@ footer {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-button {
-  font-size: calc(10px + 2vmin);
 }
