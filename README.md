@@ -40,8 +40,6 @@ Siga as etapas abaixo para executar o projeto em seu ambiente local:
 
 6. Abra o navegador e acesse `http://localhost:3000` para visualizar o formulário de boas-vindas.
 
-7. 
-
    
 
 ## Contribuição
