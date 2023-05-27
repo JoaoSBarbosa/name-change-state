@@ -24,7 +24,7 @@ const Header = () => {
             </li>
             <li>
               <a href="https://joaosbarbosa.com.br/" target="_blank">
-                Portfolio
+                Portfólio
               </a>
             </li>
             <li>
